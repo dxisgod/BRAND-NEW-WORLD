@@ -1,0 +1,82 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Loco-CTO/UI-Library/main/VisionLibV2/source.lua'))()
+
+Library:Notify({
+	Name = "Notification", -- String
+	Text = "BRAND NEW WORLD Loaded..", -- String
+	Icon = "rbxassetid://11401835376", -- String
+	Duration = 5, -- Integer
+	Callback = function()
+		-- Function
+	end
+})
+
+local Window = Library:Create({
+	Name = "Brand New World", -- String
+	Footer = "By DX", -- String
+	ToggleKey = Enum.KeyCode.RightShift, -- Enum.KeyCode
+	LoadedCallback = function()
+		-- Function
+	end,
+	
+	KeySystem = true, -- Boolean
+	Key = "HS72JSNCKAL92MS", -- String
+	MaxAttempts = 5, -- Integer
+	DiscordLink = nil, -- String (Set it to nil if you do not have one, the button will not pop out)
+	ToggledRelativeYOffset = 5 -- Number (Y Offset from bottom of your screen. Set it to nil if you want it to be centred)
+})
+
+local Tab = Window:Tab({
+	Name = "Main", -- String
+	Icon = "rbxassetid://11396131982", -- String
+	Color = Color3.new(1, 0, 0) -- Color3
+})
+
+local Section = Tab:Section({
+	Name = "AutoParry Section" -- String
+})
+
+local Label = Section:Label({
+	Name = "AutoParry", -- String
+})
+
+local Toggle = Section:Toggle({
+	Name = "Toggle AutoParry", -- String
+	Default = true, -- Boolean
+	Callback = function(Bool) 
+		-- Function
+	end
+})
+
+local Slider = Section:Slider({
+	Name = "Ping (Use Current Ping)", -- String
+	Max = 1000, -- Integer
+	Min = 0, -- Integer
+	Default = 50, -- Integer
+	Callback = function(Value)
+    		-- Function
+  	end
+})
+
+local Section = Tab:Section({
+	Name = "Insta Leave Prison" -- String
+})
+
+local Button = Section:Button({
+	Name = "Leave Prison", -- String
+	Callback = function()
+		-- Function
+	end
+})
+
+local Section = Tab:Section({
+	Name = "Fruit ESP" -- String
+})
+
+
+local Toggle = Section:Toggle({
+	Name = "Toggle ESP", -- String
+	Default = true, -- Boolean
+	Callback = function(Bool) 
+		-- Function
+	end
+})
